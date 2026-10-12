@@ -1,0 +1,97 @@
+.snapmind-home .launcher-banner{height:142px;grid-template-columns:minmax(0,1fr) auto;gap:24px;padding:23px 27px;background:linear-gradient(110deg,var(--surface),var(--accent-wash));border-color:var(--line);border-radius:14px}
+.snapmind-home .launcher-banner:hover{background:linear-gradient(110deg,var(--surface),var(--accent-wash));box-shadow:none;border-color:var(--line)}
+.banner-ambient{position:absolute;right:40px;top:-65px;width:240px;height:240px;border:1px solid #bba0e518;border-radius:50%;pointer-events:none}
+.banner-ambient:after{content:"";position:absolute;inset:23px;border:1px solid #bba0e51c;border-radius:50%}
+.banner-action-area{display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;z-index:1}
+.banner-mini-mark{position:relative;width:48px;height:44px;display:grid;place-items:center;color:var(--accent-soft)}
+.banner-mini-mark .snapmind-logo{position:absolute;border-radius:8px;box-shadow:0 3px 10px var(--accent-glow)}
+.snapmind-home .banner-capture-button{height:36px;padding:0 15px;border:1px solid #ffffff28;border-radius:9px;background:var(--accent);color:white;gap:8px;font-size:12px;font-weight:500;box-shadow:0 4px 12px var(--accent-glow)}
+.snapmind-home .banner-capture-button:hover{background:var(--accent-strong);color:white;box-shadow:0 6px 17px var(--accent-glow)}
+.launcher-banner-copy>strong{font-size:24px;white-space:normal;line-height:1.4}
+.banner-description{white-space:normal}
+.settings-tabs{display:flex;gap:4px;padding:4px;margin:0 26px 4px;border:1px solid var(--line-strong);border-radius:11px;flex-shrink:0;background:var(--surface)}
+.snapmind-home .settings-tabs button{flex:1;height:36px;padding:0 8px;justify-content:center;width:auto;font-size:13px;font-weight:500;white-space:nowrap;border-radius:7px;color:var(--ink-faint)}
+.snapmind-home .settings-tabs button[aria-selected="true"]{background:var(--accent);color:#fff;box-shadow:0 2px 5px var(--accent-glow)}
+.snapmind-home .settings-tabs button:not([aria-selected="true"]):hover{background:var(--accent-wash);color:var(--accent)}
+.settings-tab-content{flex:1;min-height:0;overflow:auto;padding:5px 26px 24px;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
+.general-setting{padding:20px 0 5px}
+.general-setting h3,.settings-section-heading h3{font-size:14px;color:var(--ink);font-weight:600;margin:0 0 6px}
+.general-setting p,.settings-section-heading p{font-size:12px;color:var(--ink-faint);line-height:1.7;margin-bottom:11px}
+.preference-segments{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line-strong);border-radius:9px;background:var(--surface);max-width:100%}
+.snapmind-home .preference-segments button{width:auto;min-width:106px;height:35px;justify-content:center;padding:0 13px;border-radius:6px;font-size:12px;gap:7px;color:var(--ink-soft)}
+.snapmind-home .preference-segments button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.snapmind-home .preference-segments button:not([aria-pressed="true"]):hover{background:var(--accent-wash);color:var(--accent)}
+.general-action-row{display:flex;gap:10px;flex-wrap:wrap}
+.snapmind-home .general-action-row button{width:auto;height:42px;display:flex;align-items:center;justify-content:flex-start;gap:10px;border:1px solid var(--line-strong);background:var(--surface);border-radius:9px;padding:0 13px;font-size:12px;color:var(--ink-soft)}
+.general-action-row kbd{font-size:10px;font-family:var(--font-mono);color:var(--accent);margin-left:20px}
+.settings-page-footer{flex-shrink:0;display:flex;align-items:center;gap:6px;margin:0 26px;padding:12px 0;border-top:1px solid var(--line);font-size:10px;color:var(--ink-faint)}
+.settings-page-footer.is-general{border-top:0}
+.settings-page-footer>span{margin-left:auto;font-family:var(--font-display)}
+.settings-page-footer i{width:5px;height:5px;background:var(--ink-faint);border-radius:50%}.settings-page-footer i.online{background:var(--ok)}
+.settings-section-heading{display:flex;align-items:flex-start;justify-content:space-between;margin-top:22px;gap:15px}
+.usage-page-heading{align-items:center;margin-bottom:18px}
+.usage-page-heading>h3{margin:0;flex:1}
+.usage-refresh,.snapmind-home .home-settings-panel .usage-refresh{display:flex;align-items:center;justify-content:center;flex:0 0 28px;width:28px;height:28px;padding:0;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--ink-faint)}
+.usage-refresh svg,.snapmind-home .home-settings-panel .usage-refresh svg{display:block;color:inherit}
+.usage-refresh:hover:not(:disabled),.snapmind-home .home-settings-panel .usage-refresh:hover:not(:disabled){color:var(--accent);background:var(--accent-wash);border-color:var(--accent-soft)}
+.usage-refresh:focus-visible{outline:2px solid var(--accent-soft);outline-offset:2px}
+.usage-refresh:disabled{opacity:1;cursor:wait}
+.usage-refresh.is-refreshing svg{animation:usage-refresh-spin .6s linear infinite;color:var(--accent)}
+@keyframes usage-refresh-spin{to{transform:rotate(360deg)}}
+.usage-block-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.usage-block-heading h4{display:flex;align-items:center;gap:8px;margin:0;font-size:13px;color:var(--ink);font-weight:600}
+.usage-block-heading h4::before{content:'';width:3px;height:15px;flex-shrink:0;border-radius:2px;background:var(--accent)}
+.usage-ocr{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.usage-ocr-total{display:flex;align-items:center;gap:9px;padding:6px 10px;border:1px solid var(--accent-glow);border-radius:8px;background:var(--accent-wash)}
+.usage-ocr-total>span{font-size:11px;color:var(--ink-faint)}
+.usage-ocr-total>strong{font-family:var(--font-mono);font-size:17px;font-weight:500;color:var(--ink)}
+.usage-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:13px 0 20px}
+.usage-metrics article{border:1px solid var(--accent-glow);border-radius:11px;background:var(--accent-wash);padding:17px 14px;display:flex;flex-direction:column;gap:12px}
+.usage-metrics span{font-size:11px;color:var(--ink-faint)}.usage-metrics strong{font-family:var(--font-mono);font-size:23px;font-weight:500;color:var(--ink)}
+.usage-empty{display:flex;flex-direction:column;align-items:center;gap:11px;padding:34px 20px;border:1px dashed var(--line-strong);border-radius:12px;color:var(--ink-faint);text-align:center}
+.usage-empty svg{color:var(--accent-soft)}.usage-empty strong{font-size:13px;font-weight:500;color:var(--ink-soft)}.usage-empty p{font-size:11px;line-height:1.8;max-width:450px}
+.usage-status{padding:35px 0;font-size:12px;color:var(--ink-faint)}
+.usage-table{width:100%;font-size:12px;border-collapse:collapse;color:var(--ink-soft)}.usage-table th,.usage-table td{padding:12px;border-bottom:1px solid var(--line);text-align:left}.usage-table th{font-size:11px;color:var(--ink-faint);font-weight:500}.usage-table th:not(:first-child),.usage-table td:not(:first-child){text-align:right;white-space:nowrap}.usage-table td:first-child{overflow-wrap:anywhere}.usage-ocr-table td:first-child>span{display:inline;vertical-align:middle}
+.usage-model-type{display:inline-flex;margin-left:8px;padding:2px 6px;border:1px solid var(--accent-glow);border-radius:5px;background:var(--accent-wash);color:var(--accent);font-size:10px;font-weight:500;vertical-align:middle;white-space:nowrap}
+.snapmind-home .model-entry-card{display:flex;align-items:center;gap:15px;height:auto;padding:20px;width:100%;border:1px solid var(--line-strong);border-radius:12px;background:var(--surface);margin-top:15px;color:var(--ink-soft)}
+.model-entry-icon{display:grid;place-items:center;height:48px;width:48px;border-radius:12px;background:var(--accent-wash);color:var(--accent)}.model-entry-card>span:nth-child(2){display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}.model-entry-card strong{font-size:14px;font-weight:500}.model-entry-card small{font-size:11px;color:var(--ink-faint)}
+.settings-small-note{font-size:11px;color:var(--ink-faint);margin:12px 1px}.settings-tab-content .tool-menu-footer{display:none}
+.home-settings-panel .preference-segments button svg,.home-settings-panel .general-action-row button svg{color:inherit}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#17151d;--surface:#201d29;--surface-sunken:#292535;--ink:#f1edf6;--ink-soft:#c0b8cb;--ink-faint:#8f849e;--line:#322b3d;--line-strong:#44384f;--accent:#a78bfa;--accent-strong:#8b5cf6;--accent-soft:#8064ad;--accent-wash:#30233f;--accent-glow:#8b5cf625}
+[data-theme="dark"] .launcher-desktop{background:radial-gradient(ellipse at 15% 20%,#30223f,transparent 60%),#100e15}
+[data-theme="dark"] .snapmind-home .launcher-banner{background:linear-gradient(110deg,var(--surface),var(--accent-wash))}
+[data-theme="dark"] .shot-thumbnail{background-color:#292535;background-image:none;border-color:var(--line)}
+[data-theme="dark"] .shot-number{background:#241e30;border-color:var(--line-strong);color:var(--accent)}
+[data-theme="dark"] .shot-caption>strong{color:var(--ink-soft)}
+[data-theme="dark"] .snapmind-home .shot-card{border-color:var(--line-strong)}
+[data-theme="dark"] .snapmind-home .launcher-view-switch button[aria-pressed="true"]{background:var(--surface);color:var(--accent)}
+[data-theme="dark"] .home-settings-heading{background:var(--surface)}
+[data-theme="dark"] .snapmind-home .home-settings-panel .tool-menu-group button{background:var(--surface);border-color:var(--line)}
+[data-theme="dark"] .snapmind-home .home-settings-panel .tool-menu-group button:hover{background:var(--accent-wash)}
+[data-theme="dark"] .modal,[data-theme="dark"] .model-settings-modal{background:var(--surface);border-color:var(--line-strong)}
+[data-theme="dark"] .model-config-field input:not([type="checkbox"]),[data-theme="dark"] .model-config-field select,[data-theme="dark"] .shortcut-setting,[data-theme="dark"] .screenshot-preference-grid .setting-row{background:var(--paper);border-color:var(--line-strong);color:var(--ink-soft)}
+[data-theme="dark"] .model-config-symbol,[data-theme="dark"] .model-configuration .model-config-note,[data-theme="dark"] .shortcut-setting .shortcut-recorder{background:var(--accent-wash);border-color:var(--line-strong);color:var(--ink-soft)}
+[data-theme="dark"] .snapmind-tooltip,[data-theme="dark"] .snapmind-tooltip:after{background:#332441;color:#e1cef9;border-color:#59406f}
+[data-theme="dark"] .snapmind-tooltip p{color:#b8a0ce}
+[data-theme="dark"] .window-controls button:hover{background:var(--surface-sunken)}
+@container(max-width:639px){.settings-tabs{margin:0 16px 4px}.settings-tab-content{padding:5px 18px 20px}.settings-page-footer{margin:0 18px}.usage-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.snapmind-home .launcher-banner{padding:18px;gap:12px;height:150px}.launcher-banner-copy>strong{font-size:21px}.banner-brandline{font-size:8px}.banner-mini-mark{display:none}.snapmind-home .banner-capture-button{padding:0 10px;font-size:11px}.preference-segments{display:flex}.snapmind-home .preference-segments button{min-width:0;flex:1;padding:0 10px}.snapmind-home .settings-tabs button{font-size:11px;padding:0 4px}}
+@container(max-width:439px){.snapmind-home .launcher-banner{height:166px;grid-template-columns:1fr;gap:10px;align-items:start}.banner-action-area{align-items:flex-start}.banner-brandline{margin-bottom:7px}.launcher-banner-copy>strong{font-size:20px}.banner-description{font-size:10px;margin-top:3px}.snapmind-home .banner-capture-button{height:31px}.general-action-row kbd{margin-left:0}}
+.snapmind-home .home-settings-heading .settings-return-home{width:auto;height:34px;display:flex;align-items:center;justify-content:center;gap:7px;padding:0 12px;border:1px solid var(--line-strong);border-radius:9px;background:var(--paper);color:var(--ink-soft);flex-shrink:0;font-size:12px;white-space:nowrap}
+.home-settings-heading .settings-return-home span{font-size:12px;color:inherit}
+.snapmind-home .home-settings-heading .settings-return-home:hover{background:var(--accent-wash);border-color:var(--accent-soft);color:var(--accent)}
+.settings-return-home svg{color:inherit}
+.snapmind-home .launcher-banner{height:170px;padding-top:20px;padding-bottom:20px}
+.banner-action-area{gap:9px;padding-right:6px}
+.banner-mini-mark{display:grid;width:84px;height:82px;isolation:isolate}
+.banner-mini-mark>svg{transform:rotate(-7deg);opacity:.72}
+.banner-mini-mark .snapmind-logo{border-radius:16px;box-shadow:0 8px 22px var(--accent-glow)}
+.banner-logo-halo{position:absolute;width:106px;height:106px;background:radial-gradient(circle,var(--accent-glow),transparent 70%);border-radius:50%;z-index:-1}
+.banner-logo-dot{position:absolute;border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line-strong);border-radius:50%;background:var(--accent-soft)}
+.banner-logo-dot.one{width:9px;height:9px;right:-8px;top:10px}.banner-logo-dot.two{width:6px;height:6px;left:-7px;bottom:17px;opacity:.65}
+.banner-feature-tags{display:flex;align-items:center;gap:10px;margin-top:16px;color:var(--ink-faint)}
+.banner-feature-tags>span{display:flex;align-items:center;gap:5px;font-size:10px;white-space:nowrap}
+.banner-feature-tags svg{color:var(--accent-soft)}
+.banner-feature-tags i{width:1px;height:10px;background:var(--line-strong)}
+.banner-ambient{right:18px;top:-57px;width:290px;height:290px}
+@container(max-width:639px){.snapmind-home .launcher-banner{height:170px;padding:18px;gap:15px}.banner-action-area{padding-right:0}.banner-mini-mark{width:70px;height:66px}.banner-mini-mark>.snapmind-logo{width:46px;height:46px;border-radius:13px}.banner-mini-mark>svg{width:68px;height:68px}.banner-feature-tags{gap:7px;margin-top:12px}.banner-feature-tags>span{font-size:9px;gap:4px}}
+@container(max-width:439px){.snapmind-home .launcher-banner{grid-template-columns:minmax(0,1fr) 102px;height:184px;padding:17px 15px;gap:8px;align-items:center}.banner-action-area{align-items:center;gap:13px}.launcher-banner-copy>strong{font-size:19px}.banner-brandline{font-size:7px;letter-spacing:.5px}.banner-feature-tags{flex-wrap:wrap;gap:6px 8px}.banner-feature-tags i{display:none}.banner-feature-tags>span{font-size:9px}.snapmind-home .banner-capture-button{font-size:10px;padding:0 8px;gap:5px}.banner-capture-button>svg:last-child{display:none}.snapmind-home .home-settings-heading .settings-return-home{padding:0 9px;font-size:11px}.home-settings-heading .settings-return-home span{font-size:11px}}

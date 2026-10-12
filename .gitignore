@@ -1,0 +1,63 @@
+# Dependencies and generated builds
+node_modules/
+**/node_modules/
+.venv/
+venv/
+frontend/dist/
+src-tauri/target/
+src-tauri/gen/
+backend/vendor/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Local credentials and runtime configuration
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+backend/.snapmind
+backend/.snapmind.*.tmp
+.snapmind/**
+!.snapmind/README.md
+!.snapmind/config.example.toml
+snapmind/
+.codex/
+.agents/
+.aws/
+
+# Screenshots, chat history, memory and test outputs
+artifacts/
+**/artifacts/
+backend/data/
+**/sessions/
+**/memories/
+**/backups/
+**/logs/
+*.sqlite*
+*.db
+*.db-*
+*.jsonl
+*.log
+*.tmp
+*.bak
+*.dmp
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Editor / OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Do not accidentally commit another export
+github-upload-*/

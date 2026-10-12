@@ -1,0 +1,19 @@
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+langgraph>=0.6,<2
+pytest>=8,<10
+httpx>=0.28,<1
+websockets>=15,<16
+Pillow>=11,<13
+opencv-python-headless>=4.10,<5
+numpy>=2,<3
+zxing-cpp>=2.3,<4
+comtypes>=1.4,<2; sys_platform == 'win32'
+pywin32>=310; sys_platform == 'win32'
+winrt-runtime>=3.2,<4; sys_platform == 'win32'
+winrt-Windows.Foundation>=3.2,<4; sys_platform == 'win32'
+winrt-Windows.Foundation.Collections>=3.2,<4; sys_platform == 'win32'
+winrt-Windows.Globalization>=3.2,<4; sys_platform == 'win32'
+winrt-Windows.Storage.Streams>=3.2,<4; sys_platform == 'win32'
+winrt-Windows.Graphics.Imaging>=3.2,<4; sys_platform == 'win32'
+winrt-Windows.Media.Ocr>=3.2,<4; sys_platform == 'win32'

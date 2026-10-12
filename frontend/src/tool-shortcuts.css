@@ -1,0 +1,34 @@
+.tool-shortcut-controls{display:flex;align-items:center;gap:8px}
+.tool-shortcut-record,.snapmind-home .tool-shortcut-settings .tool-shortcut-record{display:flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;width:auto;min-width:100px;height:34px;padding:0 10px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink-soft);cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.tool-shortcut-record kbd{flex:1;font-family:var(--font-mono);font-size:12px;line-height:1.3;white-space:nowrap;text-align:center;color:inherit}
+.tool-shortcut-record svg,.snapmind-home .tool-shortcut-settings .tool-shortcut-record svg{display:block;flex-shrink:0;color:inherit}
+.tool-shortcut-record:hover,.tool-shortcut-record.recording,.snapmind-home .tool-shortcut-settings .tool-shortcut-record:hover,.snapmind-home .tool-shortcut-settings .tool-shortcut-record.recording{color:var(--accent);background:var(--accent-wash);border-color:var(--accent-soft)}
+.tool-shortcut-record.recording{outline:2px solid var(--accent-glow);outline-offset:2px}
+.tool-shortcut-record:focus-visible{outline:2px solid var(--accent-soft);outline-offset:2px}
+.tool-shortcut-recording{font-size:11px;line-height:1.5;color:var(--accent);margin:5px 0 0;max-width:230px}
+.shortcut-sr-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.tool-shortcut-error{font-size:11px;line-height:1.5;color:#b24164;margin:5px 0 0;max-width:230px}
+.tool-shortcut-popup{position:fixed;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 16px);box-sizing:border-box;padding:9px 11px;border:1px solid #e8e0f0;border-radius:11px;background:#fcfaff;color:#40364b;box-shadow:0 5px 20px #21133420;z-index:10002;cursor:default;user-select:none;font-family:var(--font-body)}
+.tool-shortcut-popup>strong{font-size:13px;font-weight:600;white-space:nowrap}
+.tool-shortcut-popup>i{width:1px;height:21px;flex-shrink:0;background:#e4dced}
+.tool-shortcut-popup:after{content:'';position:absolute;width:8px;height:8px;background:#fcfaff;border-right:1px solid #e8e0f0;border-bottom:1px solid #e8e0f0;bottom:-5px;left:calc(50% - 4px);transform:rotate(45deg)}
+.tool-shortcut-popup[data-below='true']:after{bottom:auto;top:-5px;transform:rotate(225deg)}
+.capture-dropdown-menu.shortcut-menu{z-index:10003}
+.shortcut-menu .dropdown-option-list>button.shortcut-chord{grid-column:1/-1}
+.tool-shortcut-settings>header{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin:20px 0 14px}
+.tool-shortcut-settings h3{font-size:15px;font-weight:600;margin:0 0 6px;color:var(--ink)}
+.tool-shortcut-settings header p,.tool-shortcut-note{font-size:11px;line-height:1.7;color:var(--ink-faint);margin:0}
+.tool-shortcut-settings>header>div{flex:1;min-width:0}
+.tool-shortcut-settings>header>button,.snapmind-home .tool-shortcut-settings>header>button{display:flex;align-items:center;justify-content:center;width:auto;height:auto;gap:5px;flex-shrink:0;white-space:nowrap;border:1px solid var(--line-strong);border-radius:8px;padding:7px 9px;font-size:11px;background:var(--surface);color:var(--ink-soft)}
+.tool-shortcut-group{margin:0 0 16px}
+.tool-shortcut-group h4{font-size:11px;font-weight:500;color:var(--ink-faint);margin:0 0 8px}
+.tool-shortcut-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px;min-height:36px;border:1px solid var(--line);background:var(--surface);margin-top:-1px}
+.tool-shortcut-row:first-of-type{border-radius:9px 9px 0 0}
+.tool-shortcut-row:last-child{border-radius:0 0 9px 9px}
+.tool-shortcut-row>strong{font-size:12px;font-weight:500;color:var(--ink-soft);white-space:nowrap}
+.tool-shortcut-row .tool-shortcut-picker{display:flex;flex-direction:column;align-items:flex-end;gap:5px;max-width:70%}
+.tool-shortcut-settings .tool-shortcut-error,.tool-shortcut-settings .tool-shortcut-recording{margin:0;text-align:right}
+.tool-shortcut-note{margin:5px 0 18px}
+.modal .tool-shortcut-settings{margin:0 15px}
+.home-settings-panel .shortcut-setting{margin:12px 0 20px}
+@media(max-width:520px){.tool-shortcut-row{padding:8px}.tool-shortcut-row>strong{font-size:11px}.tool-shortcut-settings>header{gap:8px}.tool-shortcut-settings>header>button{font-size:10px;padding:6px}.tool-shortcut-controls{gap:3px}.tool-shortcut-row .tool-shortcut-picker{max-width:75%}.tool-shortcut-record,.snapmind-home .tool-shortcut-settings .tool-shortcut-record{min-width:80px;padding:0 7px;gap:5px}.tool-shortcut-record kbd{font-size:11px}}

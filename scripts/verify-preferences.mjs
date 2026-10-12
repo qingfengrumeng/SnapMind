@@ -1,0 +1,40 @@
+import {chromium} from 'playwright'
+import assert from 'node:assert/strict'
+const native=process.argv.includes('--native')
+const browser=native?await chromium.connectOverCDP('http://127.0.0.1:9223'):await chromium.launch({channel:'msedge',headless:true})
+const context=native?browser.contexts()[0]:await browser.newContext({viewport:{width:1100,height:1000}})
+const page=native?context.pages().find(p=>p.url().includes('5174')&&!p.url().includes('desktop=')):await context.newPage()
+const click=locator=>native?locator.evaluate(e=>e.click()):locator.click()
+const errors=[];page.on('pageerror',e=>errors.push(e.message))
+let original
+try{
+ if(native){await page.evaluate(()=>window.__TAURI_INTERNALS__.invoke('show_launcher'));await page.reload()}else await page.goto('http://127.0.0.1:5173')
+ await page.locator('.snapmind-home').waitFor()
+ original=await page.evaluate(()=>({theme:localStorage.getItem('snapmind-theme'),language:localStorage.getItem('snapmind-language')}))
+ await page.evaluate(()=>{localStorage.setItem('snapmind-theme','light');localStorage.setItem('snapmind-language','zh-CN')});await page.reload()
+ await page.waitForFunction(()=>[...document.querySelectorAll('.shot-thumbnail img')].slice(0,2).every(img=>img.complete&&img.naturalWidth>0))
+ await page.screenshot({path:native?'artifacts/native-home-capture-polished.png':'artifacts/home-capture-polished.png'})
+ const settings=page.locator('.launcher-settings-toggle');await click(settings)
+ await page.getByRole('tab',{name:'通用',exact:true}).waitFor()
+ assert.equal(await page.getByRole('button',{name:'日本語',exact:true}).count(),0)
+ await click(page.getByRole('button',{name:'深色',exact:true}));await page.waitForFunction(()=>document.documentElement.dataset.theme==='dark')
+ await page.waitForTimeout(220)
+ await page.screenshot({path:native?'artifacts/native-settings-dark.png':'artifacts/settings-dark.png'})
+ await click(page.getByRole('button',{name:'English',exact:true}));await page.getByRole('tab',{name:'General',exact:true}).waitFor()
+ await page.reload();await click(settings);assert.equal(await page.getByRole('tab',{name:'General',exact:true}).count(),1)
+ assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),'dark')
+ await click(page.getByRole('tab',{name:'Usage',exact:true}));await page.locator('.usage-metrics').waitFor()
+ assert.equal(await page.locator('.usage-metrics article').count(),4)
+ assert.ok(!await page.locator('.usage-status[role=alert]').count())
+ await page.screenshot({path:'artifacts/settings-token-usage.png'})
+ await click(page.getByRole('tab',{name:'Models',exact:true}));await click(page.getByRole('button',{name:'Configure DeepSeek',exact:true}));await page.locator('[data-profile-id="deepseek"] form').waitFor();assert.equal(await page.getByRole('dialog').count(),0)
+ await click(page.getByRole('tab',{name:'General',exact:true}));await click(page.getByRole('button',{name:'繁體中文',exact:true}));await page.getByRole('group',{name:'外觀主題'}).waitFor()
+ await click(page.getByRole('button',{name:'简体中文',exact:true}));await click(page.getByRole('button',{name:'浅色',exact:true}))
+ await page.screenshot({path:native?'artifacts/native-settings-general.png':'artifacts/settings-general.png'})
+ if(!native){await page.emulateMedia({colorScheme:'dark'});await click(page.getByRole('button',{name:'跟随系统',exact:true}));assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),'dark');await page.emulateMedia({colorScheme:'light'});await page.waitForFunction(()=>document.documentElement.dataset.theme==='light');await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true)}
+ assert.deepEqual(errors,[]);console.log('PASS: capture banner, settings tabs, themes, Simplified/Traditional/English persistence, actual usage endpoint, inline model profiles and responsive layout.')
+}finally{
+ if(original)await page.evaluate(original=>{for(const [key,value]of [['snapmind-theme',original.theme],['snapmind-language',original.language]]){if(value===null)localStorage.removeItem(key);else localStorage.setItem(key,value)}},original)
+ if(native)await page.reload()
+ await browser.close()
+}

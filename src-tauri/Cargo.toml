@@ -1,0 +1,43 @@
+[package]
+name = "snapmind-desktop"
+version = "0.1.0"
+edition = "2021"
+description = "SnapMind desktop development host"
+
+[build-dependencies]
+tauri-build = { version = "2.6", features = [] }
+
+[dependencies]
+tauri = { version = "2.11", features = ["tray-icon", "image-png"] }
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "0.22"
+png = "0.17"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_Graphics_Gdi", "Win32_Graphics_Dwm", "Win32_UI_WindowsAndMessaging", "Win32_UI_Input_KeyboardAndMouse", "Win32_System_DataExchange", "Win32_System_Memory", "Win32_System_Threading", "Win32_System_LibraryLoader"] }
+
+# Keep screenshot processing fast in desktop development mode without release packaging.
+[profile.dev.package.snapmind-desktop]
+opt-level = 2
+
+[profile.dev.package.png]
+opt-level = 3
+
+[profile.dev.package.fdeflate]
+opt-level = 3
+
+# PNG hot paths call these dependencies even when png itself is optimized.
+[profile.dev.package.crc32fast]
+opt-level = 3
+
+[profile.dev.package.simd-adler32]
+opt-level = 3
+
+[profile.dev.package.base64]
+opt-level = 3
+
+[profile.dev.package.serde_json]
+opt-level = 3

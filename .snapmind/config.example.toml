@@ -1,0 +1,15 @@
+format_version = 1
+
+[memory]
+context_window_tokens = 32000
+auto_compact_token_limit = 24000
+response_reserve_tokens = 4096
+summary_max_tokens = 2000
+recent_turns = 10
+long_term_memory_enabled = true
+memory_min_idle_hours = 6.0
+memory_max_age_days = 30
+memory_batch_size = 16
+memory_poll_seconds = 60
+memory_context_tokens = 2000
+image_reserve_tokens = 2048

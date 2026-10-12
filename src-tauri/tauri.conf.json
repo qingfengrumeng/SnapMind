@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "SnapMind",
+  "version": "0.1.0",
+  "identifier": "local.snapmind.desktop",
+  "build": {
+    "beforeDevCommand": "node scripts/desktop-services.mjs",
+    "devUrl": "http://127.0.0.1:5174",
+    "beforeBuildCommand": "npm run build:web",
+    "frontendDist": "../frontend/dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "SnapMind 截图",
+        "url": "index.html",
+        "width": 800,
+        "height": 700,
+        "minWidth": 560,
+        "minHeight": 480,
+        "center": true,
+        "decorations": false,
+        "resizable": true,
+        "alwaysOnTop": false
+      },
+      {
+        "label": "capture",
+        "title": "SnapMind 区域截图",
+        "url": "index.html?desktop=capture",
+        "width": 800,
+        "height": 600,
+        "visible": false,
+        "decorations": false,
+        "resizable": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "focus": false,
+        "transparent": true,
+        "backgroundColor": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": "image",
+        "title": "SnapMind 浮动截图",
+        "url": "index.html?desktop=image",
+        "width": 560,
+        "height": 360,
+        "minWidth": 1,
+        "minHeight": 1,
+        "visible": false,
+        "decorations": false,
+        "resizable": false,
+        "alwaysOnTop": true,
+        "focus": false,
+        "skipTaskbar": true,
+        "transparent": true,
+        "backgroundColor": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": "workspace",
+        "title": "SnapMind 内容工作区",
+        "url": "index.html?desktop=workspace",
+        "width": 720,
+        "height": 740,
+        "minWidth": 480,
+        "minHeight": 400,
+        "visible": false,
+        "decorations": false,
+        "resizable": true,
+        "alwaysOnTop": true,
+        "focus": false,
+        "skipTaskbar": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' ipc: http://ipc.localhost http://127.0.0.1:5174 ws://127.0.0.1:5174 http://127.0.0.1:8776; img-src 'self' data: blob: http://snapmind-frame.localhost; media-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self' 'unsafe-eval'"
+    }
+  },
+  "bundle": {
+    "active": false,
+    "icon": [
+      "icons/icon.ico",
+      "icons/icon.png"
+    ]
+  }
+}

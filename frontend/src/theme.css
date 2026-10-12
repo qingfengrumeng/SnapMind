@@ -1,0 +1,58 @@
+@import url('/fonts/fonts.css');
+
+/* Typography and palette follow oyorf/person_dashboard, Workbench/src/styles.css.
+   Interface layouts and SnapMind artwork are specific to this application. */
+:root {
+ color-scheme:light;
+ --paper:#fafafa;--surface:#fff;--surface-sunken:#f4f4f5;
+ --ink:#0a0a0a;--ink-soft:#52525b;--ink-faint:#a1a1aa;
+ --line:#ececee;--line-strong:#dcdce0;
+ --accent:#7c3aed;--accent-strong:#6d28d9;--accent-soft:#a78bfa;--accent-wash:#f3effe;--accent-glow:rgba(124,58,237,.16);
+ --ok:#16a34a;--warn:#d97706;--danger:#dc2626;
+ --font-display:var(--font-body);
+ --font-body:"Noto Sans SC","Segoe UI","Microsoft YaHei UI",system-ui,sans-serif;
+ --font-mono:var(--font-body);
+ --green:var(--accent);--dark:var(--ink);--mint:var(--accent-wash);--border:var(--line);--muted:var(--ink-faint);
+ font-family:var(--font-body);color:var(--ink);background:var(--paper);
+}
+body{font-family:var(--font-body)}
+button:focus-visible,a:focus-visible{outline-color:var(--accent)}
+input:focus-visible,textarea:focus-visible{outline-color:var(--accent-soft)}
+::selection{background:#e8ddfc}
+.primary,.send-button,.new-session{background:var(--accent);border-color:var(--accent);color:#fff}
+.primary:not(:disabled):hover,.send-button:hover,.new-session:hover{background:var(--accent-strong);color:#fff;box-shadow:0 3px 12px var(--accent-glow)}
+.modal,.floating-workspace,.native-image-window{color:var(--ink);font-family:var(--font-body)}
+.modal h2,.floating-workspace .welcome h3{font-family:var(--font-display);color:var(--ink);letter-spacing:-.025em}
+.floating-workspace,.floating-screenshot{border-color:var(--line-strong);background:var(--surface)}
+.floating-workspace-titlebar,.floating-image-titlebar,.native-image-window>header{background:var(--paper);border-color:var(--line);color:var(--ink-soft)}
+.floating-workspace-titlebar>span,.floating-image-titlebar>span,.native-image-window>header>span{color:var(--ink-soft)}
+.floating-workspace .history-panel{background:var(--paper);border-color:var(--line)}
+.floating-workspace .panel-header h2,.floating-workspace .history-item-text strong{color:var(--ink-soft)}
+.floating-workspace .history-item.active{background:var(--accent-wash);border-color:#e8ddfc}
+.floating-workspace .history-item.active .history-item-text strong{color:var(--accent-strong)}
+.floating-workspace .history-item-text small,.floating-workspace .history-group,.floating-workspace .welcome>p{color:var(--ink-faint)}
+.floating-workspace .message-text{color:var(--ink-soft);line-height:1.85}
+.floating-workspace .quick-tools button{color:var(--accent-strong);border-color:#e8ddfc;background:var(--surface)}
+.floating-workspace .quick-tools button:hover{background:var(--accent-wash);color:var(--accent)}
+.floating-workspace .message-avatar.assistant,.floating-workspace .message-avatar.user{background:var(--accent-wash);color:var(--accent)}
+.floating-workspace .composer,.floating-workspace .history-search{border-color:var(--line-strong);background:var(--surface)}
+.floating-workspace .context-pill,.floating-workspace .followup-chips button{background:var(--accent-wash);border-color:#e8ddfc;color:var(--accent-strong)}
+.floating-workspace .message-demo{background:var(--paper);color:var(--ink-faint);border-color:var(--line)}
+.native-image-window>footer,.floating-image-toolbar{border-color:var(--line);background:var(--surface)}
+.native-image-window>footer button,.floating-image-toolbar button{color:var(--ink-soft)}
+.native-image-window>footer button:hover,.floating-image-toolbar button:hover{background:var(--accent-wash);color:var(--accent)}
+.native-image-ai,.floating-image-toolbar .float-ai-button{color:var(--accent)!important;background:var(--accent-wash);border-color:#e8ddfc}
+.floating-desktop-nav .float-start-button{background:var(--accent);color:#fff}
+.floating-desktop-nav .float-start-button:hover{background:var(--accent-strong);color:#fff}
+.capture-tools-scroll>button:not(:disabled):hover,.capture-tools-scroll>button.active{background:var(--accent-wash);color:var(--accent)}
+.capture-tools-scroll>.capture-done,.capture-tools-scroll>.capture-done:hover{color:var(--accent);background:var(--accent-wash)}
+.capture-ai-trigger small{background:var(--accent)}
+.capture-ai-menu button:hover{background:var(--accent-wash);color:var(--accent)}
+.capture-size,.floating-image-toolbar>span{font-family:var(--font-mono)}
+.snapmind-tooltip{position:fixed;z-index:1000;pointer-events:none;max-width:min(280px,calc(100vw - 20px));padding:11px 13px;border:1px solid #e3d5fa;border-radius:11px;background:#f5efff;box-shadow:0 7px 22px #6d28d916,0 1px 3px #6d28d909;color:#573189;font-family:var(--font-body);font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.tooltip-heading{display:flex;align-items:center;gap:14px;justify-content:space-between;font-weight:500}
+.tooltip-heading kbd{flex-shrink:0;padding:2px 5px;border:1px solid #e8ddfc;border-radius:4px;background:var(--accent-wash);font-family:var(--font-mono);font-size:10px;font-weight:400;line-height:1.3;color:var(--accent)}
+.snapmind-tooltip p{margin:5px 0 0;font-size:11px;font-weight:400;line-height:1.7;color:#88749f}
+.snapmind-tooltip:after{content:"";position:absolute;left:var(--tooltip-arrow);width:7px;height:7px;background:#f5efff;transform:translateX(-50%) rotate(45deg)}
+.snapmind-tooltip[data-side="above"]:after{bottom:-4px;border-bottom:1px solid #e4daf6;border-right:1px solid #e4daf6}
+.snapmind-tooltip[data-side="below"]:after{top:-4px;border-top:1px solid #e4daf6;border-left:1px solid #e4daf6}

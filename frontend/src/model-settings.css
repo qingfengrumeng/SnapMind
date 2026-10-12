@@ -1,0 +1,59 @@
+.model-settings-modal{width:440px;max-width:calc(100vw - 32px);padding:25px 24px;background:#fff;border:1px solid #e9dff6;border-radius:15px;color:var(--ink)}
+.model-config-symbol{display:grid;place-items:center;width:42px;height:42px;margin-bottom:13px;border:1px solid #e5d8fa;border-radius:12px;background:#f5efff;color:var(--accent)}
+.model-configuration h2{font-size:20px;font-family:var(--font-body);font-weight:600;letter-spacing:0}
+.model-configuration .model-config-intro{margin:7px 0 21px;color:var(--ink-faint);font-size:11px;line-height:1.7}
+.model-configuration fieldset{border:0;padding:0;margin:0;min-width:0}
+.model-config-field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px;color:var(--ink-soft);font-size:12px;font-weight:500}
+.model-config-field b{color:var(--accent);font-weight:400}
+.model-config-field input:not([type="checkbox"]),.model-config-field select{width:100%;height:38px;padding:0 11px;border:1px solid #e3dce9;border-radius:8px;background:#faf9fc;color:var(--ink);font-size:12px;font-weight:400;min-width:0}
+.model-config-field input::placeholder{color:#b0a7bc;font-size:11px}
+.model-config-field input:focus-visible,.model-config-field select:focus-visible{outline:2px solid #dbc7fa;outline-offset:1px;border-color:#b58be8}
+.model-config-field small{font-size:10px;color:var(--ink-faint);font-weight:400;line-height:1.6}
+.model-key-state{font-size:10px;color:var(--ink-faint);font-weight:400;margin-left:6px}
+.model-key-input{position:relative;display:flex}
+.model-key-input input{padding-right:39px!important}
+.model-key-input button{position:absolute;right:3px;top:3px;width:32px;height:32px;border-radius:6px;color:#9787a9}
+.model-key-input button:hover{background:#f0e7fc;color:var(--accent)}
+.model-config-field .model-key-clear{display:flex;align-items:center;gap:7px;color:var(--ink-faint);font-size:10px;font-weight:400;margin-top:3px}
+.model-key-clear input{accent-color:var(--accent);margin:0}
+.model-configuration .model-config-note{font-size:10px;line-height:1.7;color:#92829f;background:#faf7ff;border:1px solid #eee6fa;border-radius:8px;padding:10px 11px;margin:2px 0 0}
+.model-configuration .model-config-error{font-size:11px;color:var(--danger);line-height:1.6;margin:12px 0}
+.model-config-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:20px}
+.model-config-actions button{height:35px;min-width:72px;border-radius:7px;font-size:12px}
+.model-config-actions button:not(.primary){border:1px solid var(--line);color:var(--ink-soft)}
+.model-config-loading{display:flex;align-items:center;justify-content:center;gap:8px;padding:35px 0;color:var(--ink-faint);font-size:12px}
+.model-config-loading svg,.model-config-actions .lucide-loader-circle{animation:spin 1s linear infinite}
+.snapmind-home .home-settings-panel .shortcut-settings-entry{display:flex;flex-direction:column;gap:11px;height:auto;width:auto;margin:12px 15px 8px;padding:14px;border:1px solid #e9dff6;border-radius:11px;background:#faf7ff;flex-shrink:0;align-items:stretch;text-align:left;justify-content:initial}
+.snapmind-home .home-settings-panel .shortcut-settings-entry:hover{background:#f3edfc;border-color:#d6c0f1;color:var(--accent)}
+.shortcut-entry-heading{display:flex;align-items:center;gap:7px;color:var(--accent)}
+.shortcut-entry-heading strong{font-size:12px;font-weight:500;flex:1}
+.shortcut-entry-heading>span{font-size:10px;color:var(--ink-faint)}
+.shortcut-entry-value{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border:1px solid #e3d7f3;border-radius:7px;background:#fff;color:#8b75a1}
+.shortcut-entry-value kbd{font-family:var(--font-mono);font-size:11px}
+@media(max-width:440px){.model-settings-modal{padding:23px 20px}.model-configuration h2{font-size:18px}}
+@container(min-width:640px){
+ .snapmind-home .home-settings-panel .shortcut-settings-entry{margin:14px 26px 7px;padding:11px 14px;flex-direction:row;align-items:center;gap:24px}
+ .shortcut-entry-heading{flex:1}
+ .shortcut-entry-heading strong{font-size:13px;flex:initial}
+ .shortcut-entry-heading>span{margin-left:auto}
+ .shortcut-entry-value{width:190px;padding:7px 11px}
+}
+@media(min-width:640px){
+ .modal.model-settings-modal{width:600px;padding:23px 26px}
+ .model-configuration fieldset{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+ .model-config-field:nth-child(3),.model-config-field:nth-child(4){grid-column:1/-1}
+ .model-config-symbol{width:36px;height:36px;margin-bottom:8px}
+ .model-configuration .model-config-intro{margin-bottom:15px}
+ .model-config-field{margin-bottom:12px}
+ .model-config-actions{margin-top:14px}
+}
+.modal.configuration-modal{width:600px;max-width:calc(100vw - 32px);padding:25px 26px}
+.configuration-modal h2{font-size:20px}
+.configuration-modal>.shortcut-setting{margin:16px 0}
+.screenshot-preference-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.screenshot-preference-grid .setting-row{min-height:91px;padding:12px;border:1px solid #e8e1ef;border-radius:9px;background:#faf9fc;gap:8px;align-items:flex-start}
+.screenshot-preference-grid .setting-row>span:first-child{min-width:0;flex:1}
+.screenshot-preference-grid .setting-row small{font-size:10px;line-height:1.6}
+.screenshot-preference-grid .setting-badge{flex-shrink:0;font-size:9px}
+.configuration-modal .settings-note{margin-top:14px}
+@media(max-width:639px){.screenshot-preference-grid{grid-template-columns:1fr}.modal.configuration-modal{padding:24px 20px}}

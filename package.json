@@ -1,0 +1,21 @@
+{
+  "name": "snapmind-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "dev": "npm run dev --workspace frontend",
+    "tauri": "tauri",
+    "dev:desktop": "tauri dev",
+    "dev:backend": "node scripts/backend-dev.mjs 8776",
+    "build:web": "npm run build --workspace frontend",
+    "build:exe": "tauri build --no-bundle",
+    "typecheck": "npm run typecheck --workspace frontend",
+    "test:ui": "node scripts/verify-workspace.mjs",
+    "test:capture": "node scripts/verify-capture.mjs"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.1",
+    "playwright": "^1.56.0"
+  }
+}

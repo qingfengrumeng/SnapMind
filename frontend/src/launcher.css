@@ -1,0 +1,133 @@
+﻿/* SnapMind launcher: paper surfaces, violet accents and an original capture motif. */
+.launcher-desktop{min-height:100dvh;width:100%;display:flex;align-items:center;justify-content:center;padding:50px 24px;background:radial-gradient(ellipse at 15% 20%,#eee9fa,transparent 60%),#ededf1;position:relative;color:var(--ink)}
+.desktop-preview-label{position:absolute;left:26px;top:18px;display:flex;align-items:center;gap:8px;color:var(--ink-soft);font-size:11px}
+.preview-indicator{height:5px;width:5px;background:var(--accent);border-radius:50%}
+.desktop-browser-note{position:absolute;bottom:16px;display:flex;align-items:center;gap:6px;color:var(--ink-soft);font-size:11px;text-align:center;padding:0 12px}
+.snapmind-home{width:800px;height:700px;max-width:100%;max-height:calc(100dvh - 100px);display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 70px #2221361c;position:relative;font-family:var(--font-body);font-size:14px;line-height:1.6;color:var(--ink);container-type:inline-size}
+.snapmind-logo{display:block;flex-shrink:0;user-select:none;object-fit:contain}
+.snapmind-home button{font-family:inherit;transition:background .18s,color .18s,box-shadow .18s,border-color .18s}
+.snapmind-home button:disabled{cursor:wait;opacity:.55}
+.snapmind-home button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.snapmind-home .launcher-titlebar{height:48px;flex-shrink:0;display:flex;align-items:center;padding:0 13px;gap:9px;border-bottom:1px solid var(--line);border-radius:16px 16px 0 0;background:var(--paper);user-select:none}
+.launcher-brand-logo{width:32px;height:32px;display:grid;place-items:center;flex-shrink:0}
+.snapmind-home .launcher-titlebar{cursor:default}
+.snapmind-home .window-controls .launcher-settings-toggle{width:34px;height:30px;padding:0;border-radius:7px;color:var(--ink-soft);background:transparent}
+.snapmind-home .window-controls .launcher-settings-toggle:hover,.snapmind-home .window-controls .launcher-settings-toggle.active{background:transparent;color:var(--accent)}
+.window-control-divider{height:17px;width:1px;background:#ddd5e7;margin:0 4px}
+.snapmind-home .launcher-name{font-family:var(--font-display);font-size:15px;font-weight:600;letter-spacing:-.5px;color:var(--ink)}
+.snapmind-home .window-controls{margin-left:auto;display:flex;align-items:center;gap:5px;color:var(--ink-soft)}
+.snapmind-home .window-controls button{width:34px;height:30px;padding:0;border-radius:7px}
+.snapmind-home .window-controls button:hover{background:var(--surface-sunken);color:var(--ink)}
+.snapmind-home .window-controls button:last-child:hover{background:#fef2f2;color:var(--danger)}
+.snapmind-home .launcher-content{flex:1;min-height:0;display:flex;flex-direction:column;padding:22px 20px 20px}
+.snapmind-home .launcher-banner{width:100%;height:168px;flex-shrink:0;position:relative;display:grid;grid-template-columns:minmax(0,1fr) 98px;align-items:center;gap:10px;text-align:left;padding:20px 18px 20px 22px;border-radius:16px;border:1px solid #e8e1f6;overflow:hidden;color:var(--ink);background:linear-gradient(110deg,#fff 25%,#fcfaff 66%,#f3effe)}
+.snapmind-home .launcher-banner:hover{background:linear-gradient(110deg,#fff 15%,#faf7ff 66%,#eee6ff);color:var(--ink);border-color:#d9c7fb;box-shadow:0 5px 22px #7c3aed08}
+.launcher-banner-copy{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.banner-brandline{display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:9px;line-height:1.5;letter-spacing:1px;color:var(--accent);margin-bottom:12px;white-space:nowrap}
+.banner-brand-dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.launcher-banner-copy>strong{font-family:var(--font-display);font-size:22px;font-weight:600;letter-spacing:-.7px;line-height:1.45;white-space:nowrap;color:var(--ink)}
+.banner-description{font-size:12px;line-height:1.8;margin-top:6px;color:var(--ink-soft);white-space:nowrap}
+.banner-start{display:flex;align-items:center;gap:6px;color:var(--accent);font-size:12px;font-weight:500;margin-top:16px}
+.banner-start kbd{margin-left:5px;font-family:var(--font-mono);font-weight:400;font-size:9px;color:#8e7aae;border:1px solid #e7def5;border-radius:4px;padding:1px 5px;background:#ffffff80}
+.launcher-banner-art{height:122px;width:98px;position:relative;display:block}
+.banner-dotfield{position:absolute;inset:-17px -25px -14px -9px;background-image:radial-gradient(#b19cd736 .8px,transparent .8px);background-size:9px 9px;mask-image:radial-gradient(ellipse,#000 40%,transparent 78%)}
+.banner-capture-frame{position:absolute;top:13px;left:0;width:94px;height:94px;display:grid;place-items:center;color:#bca4e8;transform:rotate(-7deg)}
+.banner-capture-frame>.snapmind-logo{position:absolute;box-shadow:0 10px 24px #7c3aed25;border-radius:13px;transform:rotate(7deg)}
+.banner-thought{position:absolute;right:-8px;bottom:10px;display:flex;align-items:center;gap:5px;background:#fff;border:1px solid #eee7f9;box-shadow:0 5px 16px #47366a09;padding:6px 9px;border-radius:8px;font-size:9px;color:var(--accent);white-space:nowrap;transform:rotate(3deg)}
+.banner-orbit-dot{position:absolute;top:4px;right:10px;width:6px;height:6px;border-radius:50%;background:#c8b4ed;border:2px solid #faf7ff;box-shadow:0 0 0 1px #e8ddf9}
+.launcher-gallery-heading{display:flex;align-items:center;justify-content:space-between;margin:26px 0 15px;min-height:34px;gap:10px}
+.launcher-gallery-heading h1{font-family:var(--font-display);font-size:18px;line-height:1.4;font-weight:600;display:flex;align-items:center;gap:9px;margin:0;color:var(--ink);letter-spacing:-.3px}
+.launcher-gallery-heading h1>svg{color:var(--ink-soft)}
+.launcher-image-count{font-family:var(--font-mono);font-size:10px;font-weight:400;letter-spacing:0;color:var(--ink-faint);border:1px solid var(--line);background:var(--surface);border-radius:5px;padding:2px 6px;line-height:1.3}
+.launcher-gallery-actions{display:flex;align-items:center;gap:6px}
+.launcher-gallery-actions button{height:32px;width:32px;border-radius:8px;padding:0;color:var(--ink-soft)}
+.snapmind-home .launcher-gallery-actions button:hover{background:var(--accent-wash);color:var(--accent)}
+.is-refreshing{animation:spin 1s linear infinite}
+.launcher-gallery-body{flex:1;min-height:0;overflow:auto;scrollbar-width:thin;scrollbar-color:#dcdce0 transparent;padding-bottom:16px}
+.snapmind-home .launcher-recent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start;min-height:0;padding:2px 1px 8px}
+.snapmind-home .launcher-recent-grid .shot-card{height:auto;min-width:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;overflow:hidden;border:1px solid #dfe0e8;border-radius:12px;background:var(--surface);box-shadow:0 2px 5px #22213604;text-align:left;color:var(--ink)}
+.snapmind-home .launcher-recent-grid .shot-card:hover{border-color:var(--accent-soft);background:var(--surface);color:var(--ink);box-shadow:0 5px 16px #7c3aed0c}
+.shot-thumbnail{height:120px;display:flex;align-items:center;justify-content:center;position:relative;padding:12px;background-color:#f2f2f5;background-image:linear-gradient(45deg,#e9e9ef80 25%,transparent 25%,transparent 75%,#e9e9ef80 75%),linear-gradient(45deg,#e9e9ef80 25%,transparent 25%,transparent 75%,#e9e9ef80 75%);background-size:12px 12px;background-position:0 0,6px 6px;border-bottom:1px solid var(--line)}
+.shot-thumbnail img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;border-radius:3px;box-shadow:0 1px 6px #14122114}
+.shot-number{position:absolute;left:7px;top:7px;display:block;min-width:24px;padding:2px 5px;border:1px solid #e7def5;border-radius:5px;background:#fffffff2;color:#9383ab;font-family:var(--font-mono);font-size:9px;line-height:1.4;text-align:center}
+.shot-caption{display:flex;flex-direction:column;gap:5px;padding:10px 11px 11px;min-width:0;background:var(--surface)}
+.shot-caption>strong{font-family:var(--font-body);font-size:12px;font-weight:500;line-height:1.5;color:#34303e;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shot-meta{display:flex;align-items:center;gap:6px;white-space:nowrap;color:#9690a3;font-family:var(--font-mono);font-size:9px;line-height:1.5}
+.shot-meta i{height:3px;width:3px;border-radius:50%;background:#c4bdcf}
+.snapmind-home .launcher-recent-grid.is-list{grid-template-columns:minmax(0,1fr);gap:10px}
+.snapmind-home .launcher-recent-grid.is-list .shot-card{display:grid;grid-template-columns:90px minmax(0,1fr) 25px;align-items:center;gap:12px;padding:9px}
+.launcher-recent-grid.is-list .shot-thumbnail{height:66px;padding:8px;border:1px solid var(--line);border-radius:7px}
+.launcher-recent-grid.is-list .shot-number{left:3px;top:3px;font-size:8px;padding:1px 4px;min-width:21px}
+.launcher-recent-grid.is-list .shot-caption{padding:0;gap:7px}
+.launcher-recent-grid.is-list .shot-caption>strong{font-size:13px}
+.launcher-recent-grid.is-list .shot-meta{font-size:10px}
+.shot-open{color:#b2a9c1;justify-self:center}
+.launcher-view-switch{display:flex;align-items:center;gap:2px;padding:3px;background:var(--surface-sunken);border:1px solid var(--line);border-radius:9px}
+.launcher-view-switch button{width:29px;height:27px;padding:0;border-radius:6px;color:#9b96a4}
+.snapmind-home .launcher-view-switch button:hover{background:#ebe6f4;color:var(--accent)}
+.launcher-view-switch button[aria-pressed="true"]{background:var(--surface);color:var(--accent);box-shadow:0 1px 4px #2413310c}
+.snapmind-home .launcher-empty-album{width:100%;height:100%;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:21px;background:transparent;border:0;padding:0;color:var(--ink-soft)}
+.snapmind-home .launcher-empty-album:hover{background:transparent;color:var(--ink)}
+.launcher-empty-art{position:relative;display:grid;place-items:center;width:90px;height:84px;color:#d9d2e6;transform:rotate(-5deg)}
+.launcher-empty-art>svg:last-child{position:absolute;color:#c4b9d9;transform:rotate(5deg)}
+.launcher-empty-copy{display:flex;flex-direction:column;align-items:center;gap:7px}
+.launcher-empty-copy>strong{font-size:14px;line-height:1.6;font-weight:500;color:#898591}
+.launcher-empty-copy>span{font-size:12px;color:var(--ink-faint);line-height:1.7}
+.launcher-shortcut-hint{position:absolute;bottom:36px;left:22px;display:flex;align-items:center;gap:5px;color:var(--ink-faint);font-size:11px;pointer-events:none}
+.launcher-shortcut-hint kbd{font-family:var(--font-mono);font-size:9px;border:1px solid var(--line);background:var(--surface);padding:2px 5px;line-height:1.2;border-radius:4px;color:#8e8b98}
+.launcher-shortcut-hint>span:last-child{margin-left:5px}
+.snapmind-home .launcher-capture-fab{position:absolute;right:22px;bottom:26px;width:54px;height:54px;border-radius:18px;padding:0;background:var(--accent);color:#fff;box-shadow:0 8px 25px var(--accent-glow);z-index:3;border:1px solid #ffffff25}
+.snapmind-home .launcher-capture-fab:hover{background:var(--accent-strong);color:#fff;box-shadow:0 10px 28px #7c3aed30}
+.snapmind-home .launcher-menu{position:absolute;z-index:12;left:16px;top:52px;background:var(--surface);width:326px;max-width:calc(100% - 32px);max-height:calc(100% - 65px);overflow:auto;padding:14px 16px;border:1px solid var(--line);border-radius:16px;box-shadow:0 12px 36px #18112714,0 2px 4px #18112705}
+.snapmind-home .launcher-menu button{display:flex;width:100%;height:43px;padding:0 12px;justify-content:space-between;gap:10px;text-align:left;color:var(--ink-soft);font-size:14px;line-height:1.5;border-radius:8px}
+.snapmind-home .launcher-menu button:hover{background:var(--accent-wash);color:var(--accent)}
+.launcher-menu kbd{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint)}
+.launcher-menu svg{color:var(--ink-faint)}
+.launcher-menu-divider{height:1px;background:var(--line);margin:7px 4px}
+.launcher-menu-status{display:flex;align-items:center;gap:7px;margin:12px 12px 0;font-size:11px;color:var(--ink-faint)}
+.launcher-menu-status i{width:5px;height:5px;border-radius:50%;background:var(--ink-faint)}
+.launcher-menu-status i.online{background:var(--ok)}
+.launcher-drop-overlay{position:absolute;inset:48px 0 0;background:#f3effef2;z-index:15;color:var(--accent);border:2px dashed var(--accent-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;font-size:15px}
+.minimized-tool{position:fixed;right:30px;bottom:60px;display:flex;align-items:center;gap:8px}
+.minimized-tool>button:first-child{height:54px;width:54px;border-radius:18px;background:var(--accent);color:#fff;box-shadow:0 5px 16px var(--accent-glow)}
+.minimized-tool>button:first-child:hover{background:var(--accent-strong);color:#fff}
+.minimized-snap{width:33px;height:33px;background:var(--surface);color:var(--accent);border-radius:50%;box-shadow:0 2px 8px #18112714}
+html[data-desktop="main"] .launcher-desktop{padding:0;background:var(--paper);min-height:100dvh}
+html[data-desktop="main"] .snapmind-home{height:100dvh;max-height:none;width:100%;border:0;border-radius:0;box-shadow:none}
+html[data-desktop="main"] .snapmind-home .launcher-titlebar{border-radius:0}
+@media(max-width:520px){.launcher-desktop{padding:0;background:var(--paper)}.launcher-desktop .desktop-preview-label,.launcher-desktop .desktop-browser-note{display:none}.snapmind-home{width:100%;height:100dvh;max-height:none;border:0;border-radius:0;box-shadow:none}.snapmind-home .launcher-titlebar{border-radius:0}}
+@media(max-width:440px){.snapmind-home .launcher-banner{grid-template-columns:1fr;padding-left:22px}.launcher-banner-art{position:absolute;right:10px;top:21px;opacity:.13;pointer-events:none}.banner-thought{display:none}.launcher-banner-copy>strong{font-size:22px}.shot-thumbnail{height:106px}.launcher-shortcut-hint{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.snapmind-home button{transition:none}.is-refreshing{animation:none}}
+@container(min-width:640px){
+ .snapmind-home .launcher-content{padding:20px 26px 18px}
+ .snapmind-home .launcher-banner{height:132px;grid-template-columns:minmax(0,1fr) 158px;padding:18px 27px;border-radius:13px}
+ .launcher-banner-copy>strong{font-size:25px}
+ .banner-brandline{margin-bottom:7px;font-size:9px}
+ .banner-description{font-size:12px;margin-top:3px}
+ .banner-start{margin-top:9px}
+ .launcher-banner-art{width:144px;height:104px;justify-self:center}
+ .banner-capture-frame{top:3px;left:21px}
+ .banner-thought{right:-1px;bottom:0}
+ .launcher-gallery-heading{margin:18px 0 12px}
+ .snapmind-home .launcher-recent-grid:not(.is-list){grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ .launcher-recent-grid:not(.is-list) .shot-thumbnail{height:auto;aspect-ratio:1.9;padding:14px;min-height:150px}
+ .launcher-recent-grid:not(.is-list) .shot-thumbnail img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}
+ .launcher-recent-grid:not(.is-list) .shot-caption{padding:12px 14px 13px}
+ .launcher-recent-grid:not(.is-list) .shot-caption>strong{font-size:13px}
+ .launcher-recent-grid.is-list .shot-card{grid-template-columns:108px minmax(0,1fr) 25px}
+}
+.launcher-resize-edge{position:absolute;z-index:40;touch-action:none}
+.launcher-resize-edge.North,.launcher-resize-edge.South{height:5px;left:12px;right:12px;cursor:ns-resize}
+.launcher-resize-edge.North{top:0}.launcher-resize-edge.South{bottom:0}
+.launcher-resize-edge.East,.launcher-resize-edge.West{width:5px;top:12px;bottom:12px;cursor:ew-resize}
+.launcher-resize-edge.East{right:0}.launcher-resize-edge.West{left:0}
+.launcher-resize-edge.NorthWest,.launcher-resize-edge.NorthEast,.launcher-resize-edge.SouthWest,.launcher-resize-edge.SouthEast{width:12px;height:12px}
+.launcher-resize-edge.NorthWest{left:0;top:0;cursor:nwse-resize}.launcher-resize-edge.NorthEast{right:0;top:0;cursor:nesw-resize}
+.launcher-resize-edge.SouthWest{left:0;bottom:0;cursor:nesw-resize}.launcher-resize-edge.SouthEast{right:0;bottom:0;cursor:nwse-resize}
+@container(min-width:440px) and (max-width:639px){
+ .launcher-recent-grid:not(.is-list) .shot-thumbnail{height:auto;aspect-ratio:1.6;min-height:140px}
+ .home-settings-panel .tool-menu-group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .home-settings-panel .tool-menu-section-title{grid-column:1/-1}
+}
+
+
